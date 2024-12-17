@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Suspense } from "react";
 const App = () => {
   const [name, setname] = useState("");
   const [pass, setpass] = useState("");
@@ -28,16 +29,16 @@ const App = () => {
         <div className="line h-[1px] w-[45%] bg-gray-400"></div>
         </div>
         <form
-          onSubmit={submitHandler}
+          onSubmit={(e)=>{
+            submitHandler(e)
+          }}
           className="h-[80%] flex flex-col items-start pl-8 justify-center  text-white font-semibold text-xl"
           action=""
         >
           <label><i className="ri-user-3-line"></i>Username/email</label>
           <input
             value={name}
-            onChange={(elem) => {
-              console.log(elem.target.value);
-              
+            onChange={(elem) => {              
               setname(elem.target.value);
             }}
             className="mb-6 mt-2 w-[90%] bg-transparent border py-2 px-3 text-lg rounded-xl outline-none "
