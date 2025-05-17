@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import {toast} from 'react-toastify';
+import {ToastContainer,toast} from 'react-toastify';
 
 const Signin = ({setToggler, User}) => {
     const {register, handleSubmit} = useForm();
@@ -49,6 +49,7 @@ const Signin = ({setToggler, User}) => {
         Sign in
         </span>
         </h1>
+        <ToastContainer />
     </form>
         </>
     );
