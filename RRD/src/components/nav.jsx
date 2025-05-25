@@ -7,10 +7,10 @@ const Nav = () => {
             <h1>FlexStore</h1>
             <input className='h-[2vw] px-6 w-[20vw] rounded-xl outline-none text-black ' type="text" placeholder='Search'/>
             <div className="left flex items-center justify-center gap-10">
-                <Link to="/">Home</Link>
-                <Link to="/About">About</Link>
-                <Link to="/Contact">Contact</Link>
-                <Link to="/Product">Product</Link>
+                <Link className='' to="/">Home</Link>
+                <Link className='' to="/About">About</Link>
+                <Link className='' to="/Contact">Contact</Link>
+                <Link className='' to="/products">Product</Link>
             </div>
         </div>
     );
